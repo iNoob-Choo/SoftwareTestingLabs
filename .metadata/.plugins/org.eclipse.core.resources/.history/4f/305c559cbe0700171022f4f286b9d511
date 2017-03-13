@@ -1,0 +1,18 @@
+package LabATest;
+
+import LabA.*;
+import static org.junit.Assert.*;
+import org.junit.*;
+
+public class ProgramTests {
+	
+	@Test
+	public void testCombineStringProgram(){
+		CombineStringProgram object=new CombineStringProgram();
+		String combinedwords=object.combineStrings("Hellow World", 2);
+		System.out.print(combinedwords);
+	}
+	
+	
+
+}

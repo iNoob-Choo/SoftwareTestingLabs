@@ -1,0 +1,27 @@
+package LabATest;
+
+import LabA.*;
+import static org.junit.Assert.*;
+import org.junit.*;
+
+public class ProgramTests {
+	
+	@Test
+	public void testCombineStringProgram(){
+		CombineStringProgram object=new CombineStringProgram();
+		String combinedwords=object.combineStrings("Hello World, i am Mr.X. Testing this function", 4);
+		//correct testing answer
+		assertEquals("Hello World, Mr.X. Testing function",combinedwords);
+	}
+	
+	@Test
+	public void testCountStringProgram(){
+		CountStringProgram object=new CountStringProgram();
+		String TestingSentence="Hello World!,how are you?";
+		String WordToFind="o";
+		int timesthatthewordoccur=object.countWordInString(TestingSentence, WordToFind);
+		assertEquals(4,timesthatthewordoccur);
+	}
+	
+
+}
