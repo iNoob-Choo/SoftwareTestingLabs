@@ -1,0 +1,72 @@
+Lab 1 & 2
+Learn how to use @Test
+1 package contains the code, another package contains the testing 
+
+@Test
+public void testingclassname(){
+	object of package 1 
+	assertXXXXXX 
+}
+
+Lab 3 
+ .equals vs ==
+
+== refering to different object
+.equals same values ( usually for comparison)
+assertSame === "=="
+assertEquals === .equals
+
+@Parameter
+How to use:
+@Test
+@Parameters ({"1st value,2nd value,expected value"},{repeat})
+
+3 Ways
+1st way
+@Parameters ({"1st value,2nd value,expected value"},{repeat})
+
+2nd way
+create array of object
+private Object[] getNumbersToAdd() {      
+return new Object[] {    
+		new Object[] {10, 15, 25},    
+		new Object[] {-50, 10, -40},    
+		new Object[] {30, 100, 130}   
+	};  
+}   
+
+@Test 
+@Parameters(method = "getNumbersToAdd") 
+
+3rd way
+-when creating object , parametersFor (always caps for the method eventhough the ori is not)
+@Test
+@Parameters
+public void paramTestV3 ( int x,int y, int z){}
+
+private Object[] parametersForParamTestV3(){
+return new Object[] {    
+		new Object[] {10, 15, 25},    
+		new Object[] {-50, 10, -40},    
+		new Object[] {30, 100, 130}   
+	};  
+}   
+
+
+Lab 4
+Maintaining clean working directory
+-output testing and actual code into seperate directories 
+
+@Test(timeout=x) ,x =milliseconds
+@Parameters({"10000","50000","200"})
+@Ignore("Comments on why skipping it ") //used to skip the test
+
+
+@Before ( setting up )
+@After
+@BeforeClass
+@AfterCalass
+for class, methods must be public/static
+
+
+

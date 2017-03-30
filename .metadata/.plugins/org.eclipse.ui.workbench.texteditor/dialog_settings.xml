@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="// accept two integers numbers as parameters and return the sum of them   public int addTwoNumbers(int a, int b) {   return a + b;  }    // Given a String words containing a sequence of smaller strings,   // count the number of occurrences of the String strFind in words   public int countWordInString(String words, String strFind) {      int posStrToFind = words.indexOf(strFind);   int wordCount = 0;   while (posStrToFind != -1) {    wordCount++;    posStrToFind = words.indexOf(strFind, posStrToFind+1);   }   return wordCount;  }  "/>
+		</list>
+		<list key="replacehistory">
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="284" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="391" key="DIALOG_HEIGHT"/>
+		<item value="546" key="DIALOG_X_ORIGIN"/>
+		<item value="112" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

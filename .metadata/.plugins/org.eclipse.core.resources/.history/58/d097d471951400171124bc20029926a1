@@ -1,0 +1,53 @@
+package my.edu.utar.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import my.edu.utar.program.MethodsUsingNewStudent;
+import my.edu.utar.program.NewStudent;
+
+public class MethodsUsingNewStudentTest {
+	
+	@Test
+	public void testFindStudentWithName() {
+		
+		MethodsUsingNewStudent muns = new MethodsUsingNewStudent(); 
+		NewStudent[] stuArray = new NewStudent[4];
+		stuArray[0] = new NewStudent("Peter Lee", 30);
+		stuArray[1] = new NewStudent("Tan Ah Kow", 40);
+		stuArray[2] = new NewStudent("Chris Goh", 20);
+		stuArray[3] = new NewStudent("Tan Ah Lian", 60);
+		
+		NewStudent result = muns.findStudentWithName(stuArray, "Tan");
+		NewStudent expectedResult = new NewStudent("Tan Ah Kow", 40);
+		assertEquals(expectedResult, result);
+
+		result = muns.findStudentWithName(stuArray, "Lim");
+		assertNull(result);
+	}	
+
+	@Test
+	public void testFindOverAgedStudents() {
+		
+		MethodsUsingNewStudent muns = new MethodsUsingNewStudent(); 
+		NewStudent[] stuArray = new NewStudent[4];
+		stuArray[0] = new NewStudent("Peter Lee", 60);
+		stuArray[1] = new NewStudent("Tan Ah Kow", 30);
+		stuArray[2] = new NewStudent("Chris Goh", 20);
+		stuArray[3] = new NewStudent("Tan Ah Lian", 70);		
+
+		NewStudent[] result = muns.findOverAgedStudents(stuArray, 50);
+		NewStudent[] expectedResult = new NewStudent[2];
+		expectedResult[0] = new NewStudent("Peter Lee", 60);
+		expectedResult[1] = new NewStudent("Tan Ah Lian", 70);		
+		
+		assertArrayEquals(expectedResult, result);
+
+		result = muns.findOverAgedStudents(stuArray, 100);
+		expectedResult = new NewStudent[0];
+		assertArrayEquals(expectedResult, result);
+	}
+	
+	
+}

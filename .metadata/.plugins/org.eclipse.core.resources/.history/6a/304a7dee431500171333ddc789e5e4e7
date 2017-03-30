@@ -1,0 +1,9 @@
+package my.edu.utar;
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+public class MyFirstClassTest {
+
+	
+}

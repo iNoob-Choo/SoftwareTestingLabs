@@ -1,0 +1,12 @@
+package my.edu.utar;
+
+class Student {
+
+	public int addTwoNumbers(int a, int b) {
+		return a + b;
+	}
+}
+
+public class MyFirstClass {
+
+}

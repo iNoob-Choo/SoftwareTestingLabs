@@ -1,0 +1,71 @@
+package my.edu.utar.program;
+
+class Student {
+	private String name;
+	private int age;
+
+	public Student(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+}
+
+public class ComparisonWithoutEqualsDefined {
+	public static void main(String[] args) {
+		String s1 = new String("dog");
+		String s2 = s1;
+		String s3 = new String("dog");
+		if (s1 == s2)
+			System.out.println("s1 & s2 are referring to the same object");
+		else
+			System.out.println("s1 & s2 are NOT referring to the same object");
+
+		if (s1 == s3)
+			System.out.println("s1 and s3 are referring to the same object");
+		else
+			System.out.println("s1 and s3 are NOT referring to the same object");
+
+		if (s1.equals(s2))
+			System.out.println("s1 & s2 refer to objects with identical values");
+
+		if (s1.equals(s3))
+			System.out.println("s1 & s3 refer to objects with identical values");
+		Student stu1 = new Student("Ah Beng", 25);
+		Student stu2 = stu1;
+		Student stu3 = new Student("Ah Beng", 25);
+		if (stu1 == stu2)
+			System.out.println("stu1 & stu2 are referring to the same object");
+		else
+			System.out.println("stu1 & stu2 are NOT referring to the same object");
+		if (stu1 == stu3)
+			System.out.println("stu1 & stu3 are refering to the same object");
+		else
+			System.out.println("stu1 & stu3 are NOT referring to the same object");
+		if (stu1.equals(stu2))
+			System.out.println("Student objects referred to by stu1 & stu2 have identical instance variable values");
+		else
+			System.out.println(
+					"Student objects referred to by stu1 & stu2 DO NOT have identical instance variable values");
+		if (stu1.equals(stu3))
+			System.out.println("Student objects referred to by stu1 & stu3 have identical instance variable values");
+		else
+			System.out.println(
+					"Student objects referred to by stu1 & stu3 DO NOT have identical instance variable values");
+	}
+}
