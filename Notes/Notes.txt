@@ -68,5 +68,16 @@ Maintaining clean working directory
 @AfterCalass
 for class, methods must be public/static
 
+Lab 5 
+Boundary Testing
+Decision Table
+State transition test
 
+Lab 6 
+Stub - use to pass data around
+Dummy - dummy class use to by a stub to fake a class
+
+Lab 7
+Mockito , no need dummy implementations
+just used to mock a class 
 
